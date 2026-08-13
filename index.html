@@ -29,7 +29,25 @@
             overflow: hidden;
         }
     </style>
-</head>
+    <style>
+        /* Force exact sizing and completely transparent background matching for the logo */
+        .app-logo, header img, .logo-container img {
+            width: 48px !important;
+            height: 48px !important;
+            max-width: 48px !important;
+            max-height: 48px !important;
+            object-fit: contain !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            border-radius: 50% !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+        header, .header-container, .top-bar {
+            background-color: #1a1a1a !important;
+        }
+    </style>
+</head></head>
 <body>
 <x-dc>
 <helmet>
@@ -722,5 +740,6 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+
 
 
