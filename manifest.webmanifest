@@ -1,22 +1,10 @@
 {
-  "name": "NaviOS Hub",
-  "short_name": "NaviOS",
-  "description": "Deep iPhone diagnostics. On-device probes plus a companion agent on your computer.",
-  "id": "/navios-hub",
-  "start_url": "./NaviOS%20Hub%20App.dc.html",
-  "scope": "./",
+  "name": "NaviiOS Hub",
+  "short_name": "NaviiOS Hub",
+  "start_url": "/",
   "display": "standalone",
-  "display_override": [
-    "standalone",
-    "fullscreen"
-  ],
-  "orientation": "portrait",
-  "background_color": "#1b1917",
-  "theme_color": "#1b1917",
-  "categories": [
-    "utilities",
-    "productivity"
-  ],
+  "background_color": "#242424",
+  "theme_color": "#242424",
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -27,26 +15,6 @@
       "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "icons/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Run full scan",
-      "url": "./NaviOS%20Hub%20App.dc.html?autoscan=1"
-    },
-    {
-      "name": "Battery",
-      "url": "./NaviOS%20Hub%20App.dc.html?view=battery"
-    },
-    {
-      "name": "Spyware scan",
-      "url": "./NaviOS%20Hub%20App.dc.html?view=spyware"
     }
   ]
 }
