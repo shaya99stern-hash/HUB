@@ -4,6 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+    <!-- navios-upgrades -->
+    <meta name="apple-mobile-web-app-title" content="NaviiOS Hub">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <style>
+        /* Fix text input behavior and prevent visual truncation on modern edge-to-edge iOS displays */
+        @supports (padding-top: env(safe-area-inset-top)) {
+            body {
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+        }
+        input, textarea, select {
+            font-size: 16px !important; /* Prevents forced auto-zoom on iOS inputs */
+        }
+        /* Dedicated Application Shell for Google Voice Integration */
+        .gv-interaction-shell {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: calc(100vh - env(safe-area-inset-bottom));
+            background: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 <x-dc>
@@ -36,7 +61,7 @@
 <div style="width:100%;max-width:520px;display:flex;flex-direction:column;padding:0 18px calc(30px + env(safe-area-inset-bottom))">
 
   <div style="display:flex;align-items:center;gap:10px;padding:calc(14px + env(safe-area-inset-top)) 2px 12px;position:sticky;top:0;background:#1b1917;z-index:5">
-    <img src="icons/navios-mark.png" alt="" style="width:24px;height:24px;flex:none" />
+    <img src="icons/navios-logo.svg" alt="NaviiOS Hub Logo" class="app-logo" style="width: 100%; max-width: 150px;">
     <span style="font-size:15px;font-weight:600;letter-spacing:-.01em">NaviOS Hub</span>
     <span style="display:flex;align-items:center;gap:7px;margin-left:auto;background:{{ agentChipBg }};border:1px solid {{ agentChipBd }};border-radius:999px;padding:5px 12px 5px 9px">
       <span style="width:6px;height:6px;border-radius:50%;flex:none;background:{{ agentDot }};animation:{{ agentAnim }}"></span>
@@ -233,7 +258,7 @@
 
 <sc-if value="{{ attachOpen }}" hint-placeholder-val="{{ false }}">
   <div style="position:fixed;inset:0;z-index:60;background:#1b1917;display:flex;flex-direction:column;justify-content:center;padding:34px 28px calc(34px + env(safe-area-inset-bottom));animation:nvrise .3s ease-out">
-    <img src="icons/navios-mark.png" alt="" style="width:44px;height:44px" />
+    <img src="icons/navios-logo.svg" alt="NaviiOS Hub Logo" class="app-logo" style="width: 100%; max-width: 150px;">
     <div style="font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#e2823f;margin-top:24px">Connected over USB</div>
     <div style="font-family:'Source Serif 4',Georgia,serif;font-size:38px;line-height:1.08;letter-spacing:-.02em;margin-top:10px;text-wrap:balance">{{ attachTitle }}</div>
     <div style="font-size:15px;color:#9a938d;margin-top:10px;line-height:1.5;text-wrap:pretty">{{ attachSub }}</div>
@@ -697,3 +722,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+
