@@ -76,3 +76,5 @@ self.addEventListener('message', e => {
     clients.matchAll({ type: 'window' }).then(list => list.forEach(c => c.postMessage(e.data.payload)));
   }
 });
+
+// Cache Bust 20260813010005
