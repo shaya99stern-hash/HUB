@@ -1,2 +1,0 @@
-pymobiledevice3>=4.14
-pycryptodome>=3.20
